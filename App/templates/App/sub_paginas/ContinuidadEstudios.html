@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuidad de estudios</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="{% static 'css/servicios.css' %}">
+    <!-- boxicon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="{% static 'img/favicon-16x16.png' %}">
+
+</head>
+<body>
+<header>
+    <nav id="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="bx bx-menu"></i>
+        </label>
+        <img class="logo" src="{% static 'img/mining (2).png' %}" height="100%">
+        <ul class="ul-navbar">
+          <li class="li-navbar"><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li class="li-navbar"><a href="{% url 'servicios' %}">Servicios</a></li>
+          <li class="li-navbar"><a href="{% url 'nosotros' %}">Nosotros</a></li>
+          <li class="li-navbar"><a href="{% url 'noticias' %}">Noticias</a></li>
+          <li class="li-navbar"><a href="{% url 'contactanos' %}">Contáctanos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<article>
+    <section class="sectionN">
+        <article class="conteinerN">
+            <h1 class="tituloN">Continuidad de Estudios</h1>
+            <p class="textoN">Servicios - Continuidad de Estudios
+            </p>
+        </article>
+    </section>
+
+    <section class="sectionN2">
+        <article class="containerN2">
+            <h1 class="tituloN2"><i class='bx bx-chevron-right'></i>Continuidad de estudios</h1><br>
+            <p class="textoN2">En nuestro compromiso con la excelencia educativa, ofrecemos servicios especializados de continuidad de
+                estudios para aquellos que buscan avanzar en su trayectoria académica. En nuestra plataforma, nos dedicamos a guiar a
+                los estudiantes a través de transiciones educativas fluidas, brindando apoyo y recursos esenciales para asegurar un
+                éxito continuo.
+                Destacamos por diseñar programas educativos que facilitan la progresión natural desde etapas educativas previas hacia
+                niveles superiores. Nuestra misión es proporcionar un puente sólido entre tus logros académicos actuales y tus
+                aspiraciones futuras.
+
+            <ul>
+                <li class="viñeta">Tutores Especializados.</li>
+                <li class="viñeta">Seguimiento Continuo.</li>
+                <li class="viñeta">Plataforma Interactiva.</li>
+                <li class="viñeta">Flexibilidad de Horarios.</li>
+                <li class="viñeta">Certificación y Reconocimiento.</li>
+            </ul>
+
+            </p>
+        </article>
+    </section>
+
+    <section class="section4">
+        <article  class="container3">
+
+            <section>
+                <h4 class="contacto">Contacto:</h4>
+                <p class="contacto"><i class='bx bxs-phone' ></i>8070 70 56 55</p>
+                <p class="contacto"><i class="bx bxs-mobile"></i>+56 4 4356787</p>
+                <p class="contacto"><i class="bx bxs-envelope"></i>contacto@miningcap.cl</p>
+                <p class="contacto"><i class="bx bxs-map"></i>Avenida Chorrillos 799, Villa Exótica, Calama Antofagasta</p>
+            </section>
+
+            <section>
+                <img class="img_logo1" src="{% static 'img/logo_mining.png' %}" alt="logo_mining">
+            </section>
+
+            <section>
+                <img class="img_logo2" src="{% static 'img/otec_plus_intercapchile.png' %}" alt="logo_otec">
+                <img class="img_logo3" src="{% static 'img/logo_sci.png' %}" alt="logo_csi">
+            </section>
+        </article>
+    </section>
+</article>
+</body>
+</html>

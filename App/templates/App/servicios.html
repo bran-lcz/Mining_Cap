@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="{% static 'css/servicios.css' %}">
+    <!-- boxicon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="{% static 'img/favicon-16x16.png' %}">
+</head>
+<body>
+<header>
+    <nav id="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="bx bx-menu"></i>
+        </label>
+        <img class="logo" src="{% static 'img/mining (2).png' %}" height="100%">
+        <ul class="ul-navbar">
+          <li class="li-navbar"><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li class="li-navbar"><a href="{% url 'servicios' %}" class="active">Servicios</a></li>
+          <li class="li-navbar"><a href="{% url 'nosotros' %}">Nosotros</a></li>
+          <li class="li-navbar"><a href="{% url 'noticias' %}">Noticias</a></li>
+          <li class="li-navbar"><a href="{% url 'contactanos' %}">Contáctanos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<article>
+    <section class="section">
+        <article>
+            <h1 class="titulo">Servicios</h1>
+            <p class="texto">En MINING CAP, nos dedicamos a brindar una gama integral de servicios diseñados para potenciar el
+                desarrollo y crecimiento profesional de individuos y organizaciones. ¡Únete a nosotros y potencia tu camino hacia
+                el éxito profesional!
+            </p>
+        </article>
+    </section>
+
+    <section class="section2">
+        <article class="container">
+            <section class="card">
+                <figure>
+                    <img src="{% static 'img/nivelación_estudios.jpeg' %}" alt="nivelación_estudios" />
+                </figure>
+                <div class="contenido">
+                    <h3>Nivelación de estudios</h3>
+                    <p>Facilitamos la nivelación académica para aquellos que buscan fortalecer sus habilidades y conocimientos.
+                        Con enfoque personalizado, brindamos oportunidades para alcanzar nuevos niveles de educación y desarrollo.
+                    </p><br><br><br>
+                    <a href="NivelacionEstudios.html">Mas información</a>
+                </div>
+            </section>
+            <section class="card">
+                <figure>
+                    <img src="{% static 'img/continuidad_estudios.jpg' %}" alt="continuidad_estudios">
+                </figure>
+                <div class="contenido">
+                    <h3>Continuidad de estudios</h3>
+                    <p>Apoyamos a los profesionales en su trayectoria educativa, ofreciendo programas que les permitan avanzar y
+                        actualizarse en sus campos de especialización.
+                    </p><br><br><br><br>
+                    <a href="ContinuidadEstudios.html">Mas información</a>
+                </div>
+            </section>
+            <section class="card">
+                <figure>
+                    <img src="{% static 'img/capacitacion.jpeg' %}" alt="capacitación">
+                </figure>
+                <div class="contenido">
+                    <h3>Capacitación</h3>
+                    <p>Destacamos por nuestra extensa experiencia en el ámbito minero, lo que nos permite ofrecer cursos de la más
+                        alta calidad. Nos enorgullece compartir nuestro conocimiento especializado mediante una plataforma moderna y
+                        eficiente: nuestro Campus Virtual.
+                    </p><br>
+                    <a href="Capacitacion.html">Mas información</a>
+                </div>
+            </section>
+
+            <section class="card">
+                <figure>
+                    <img src="{% static 'img/reclutamiento_en_linea.webp' %}" alt="reclutamiento en linea">
+                </figure>
+                <div class="contenido">
+                    <h3>Reclutamiento en linea</h3>
+                    <p>Conectamos talento con oportunidades laborales, actuando como un puente entre profesionales calificados y
+                        empresas en búsqueda de habilidades específicas.
+                    </p><br><br><br><br>
+                    <a href="ReclutamientoEnLinea.html">Mas información</a>
+                </div>
+            </section>
+
+            <section class="card">
+                <figure>
+                    <img src="{% static 'img/validacion_estudios.jpg' %}" alt="validacion_estudios">
+                </figure>
+                <div class="contenido">
+                    <h3>Validación de estudios de enseñanza media laboral</h3>
+                    <p>Facilitamos la validación de estudios de enseñanza media laboral, reconociendo y respaldando el aprendizaje
+                        adquirido en el ámbito laboral. Nuestro objetivo es abrir puertas a nuevas oportunidades educativas y
+                        profesionales.
+                    </p>
+                    <a href="ValidacionDeEstudios.html">Mas información</a>
+                </div>
+            </section>
+
+            <section class="card">
+                <figure>
+                    <img src="{% static 'img/transporte_de_carga.jpg' %}" alt="transporte_de_carga">
+                </figure>
+                <div class="contenido">
+                    <h3>Transporte de carga y arriendo de maquinaria</h3>
+                    <p>Simplificamos sus operaciones al proporcionar servicios integrados de transporte de carga y arriendo de maquinaria
+                        especializada.
+                    </p><br><br><br><br>
+                    <a href="ArriendoDeMaquinaria.html">Mas información</a>
+                </div>
+            </section>
+        </article>
+    </section>
+
+    <section class="section3">
+        <article class="container2">
+            <section >
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.3533805255884!2d-68.91321992516039!3d-22.453351021822353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96ac09d9155c338b%3A0x39d097704da5bcd6!2sAv.%20Chorrillos%20799%2C%201392144%20Calama%2C%20Antofagasta!5e0!3m2!1ses-419!2scl!4v1700422017612!5m2!1ses-419!2scl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+            <section class="direccion">
+                <h3 class="titulo2">Dirección</h3>
+                <p class="texto2"><b>Avenida Chorrillos 799, Villa Exótica, Calama, Chile</b></p>
+            </section>
+        </article>
+    </section>
+
+    <section class="section4">
+        <article  class="container3">
+
+            <section>
+                <h4 class="contacto">Contacto:</h4>
+                <p class="contacto"><i class="bx bxs-phone"></i>8070 70 56 55</p>
+                <p class="contacto"><i class="bx bxs-mobile"></i>+56 4 4356787</p>
+                <p class="contacto"><i class="bx bxs-envelope"></i>contacto@miningcap.cl</p>
+                <p class="contacto"><i class="bx bxs-map"></i>Avenida Chorrillos 799, Villa Exótica, Calama Antofagasta</p>
+            </section>
+
+            <section>
+                <img class="img_logo1" src="{% static 'img/logo_mining.png' %}" alt="logo_mining">
+            </section>
+
+            <section>
+                <img class="img_logo2" src="{% static 'img/otec_plus_intercapchile.png' %}" alt="logo_otec">
+                <img class="img_logo3" src="{% static 'img/logo_sci.png' %}" alt="logo_csi">
+            </section>
+        </article>
+    </section>
+
+    <footer>
+        <p>Copyright 2023 Todos los derechos reservados a:<span><a class="JBMP" href="#"> JBMP</a></span></p>
+    </footer>
+
+</article>
+</body>
+</html>

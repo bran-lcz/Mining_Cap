@@ -1,0 +1,221 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'img/favicon-16x16.png' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/P4.css' %}">
+    <title>Noticias</title>
+</head>
+<body style="background: rgb(255, 102, 0);">
+    <!-- Contenido de la página -->
+  </body>
+      <nav id="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="bx bx-menu"></i>
+        </label>
+        <img class="logo" src="{% static 'img/mining (2).png' %}" height="100%">
+        <ul class="ul-navbar">
+            <li class="li-navbar"><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li class="li-navbar"><a href="{% url 'servicios' %}">Servicios</a></li>
+            <li class="li-navbar"><a href="{% url 'nosotros' %}">Nosotros</a></li>
+            <li class="li-navbar"><a href="{% url 'noticias' %}" class="active">Noticias</a></li>
+            <li class="li-navbar"><a href="{% url 'contactanos' %}">Contáctanos</a></li>
+        </ul>
+    </nav><br><br><br><br>
+
+
+    
+    
+<!-- ===================================AGREGAR NOTICIA==========================================-->
+<div class="dropdown">
+    <button id="btn" onclick="toggleDropdown();">Agregar Noticia</button>
+    <div class="dropdown-content" style="display: none;">
+        <div class="Agnoticia">
+            <center>
+            <form action="{% url 'add_card' %}" method="post">
+                {% csrf_token %}
+                
+                <div class="inputs">
+                    <textarea type="text" name="title" class="input" placeholder="Título de noticia" required="" style="width: 100%; height: 100px;"></textarea>
+                </div>
+                <br>
+                <div class="inputs">
+                    <textarea name="description" class="input" placeholder="Descripción de Noticias" required="" style="width: 100%; height: 100px;"></textarea>
+                </div>            
+                
+                <br>
+                <label class="inputs">
+                    <input type="text" name="image" class="input" placeholder="Url de imágen"  required="" onchange="previewFile(this);">
+                </label><br><br>
+                <img id="previewImage" src="" width="270" height="250" alt="imágen">                        
+                <br><br>
+                <button id="btn" type="submit">Agregar Noticia</button>
+            </form></center>
+        </div>
+    </div>
+</div>
+    <!-- ==============================tARJETA CREADA...===============================================-->
+    <div class="card-container">
+        {% for card in cards %}
+        <div class="myCard">
+            <div class="innerCard">
+                <div class="frontSide">
+                    <p class="title">{{ card.title }}</p>
+        
+                    <img src="{{ card.image }}" alt="Image" width="270" height="250" style="border: 5px solid black; border-radius: 15px;">
+        
+                    <p>{{ card.date }}</p>
+                </div>
+                <div class="backSide">
+                    <p class="title">{{ card.title }}</p>
+                    <p>{{ card.description }}</p>
+                    <form action="{% url 'delete_card' card.id %}" method="post">
+                        {% csrf_token %}
+                        <p><a href="mailto:info@miningcap.cl">info@miningcap.cl</a></p>
+                        <button id="btn">Borrar Noticia</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    <!-- =============================================================================-->
+            <div class="myCard">
+                <div class="innerCard">
+                    <div class="frontSide">
+                        <p class="title">¡Oferta Laboral en el Mundo Minero!</p>
+                        <img class="news1" src="{% static 'img/excel.svg' %}" alt="News">
+                        <p>14/10/2023</p>
+                    </div>
+                    <div class="backSide">
+                        <p class="title">Se requiere administrativa</p>
+                        <p>Se busca administrativa con habilidades intermedias en Excel y conocimientos en SAP para integrarse a una faena minera de prestigio. El turno es 4x3, ofreciendo una dinámica de trabajo única. Los interesados pueden enviar su CV a info@miningcap.cl y ser parte de esta emocionante oportunidad en la industria minera.</p>
+                        <p><a href="mailto:info@miningcap.cl">info@miningcap.cl</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="myCard">
+                <div class="innerCard">
+                    <div class="frontSide">
+                        <p class="title">¡Noticias de Empleo!</p>
+                        <img class="news1" src="{% static 'img/undraw_news_re_6uub.svg' %}" alt="News">
+                        <p>27/11/2023</p>
+                    </div>
+                    <div class="backSide">
+                        <p class="title">Se requiere supervisores de seguridad y guardias</p>
+                        <p>Empresa líder busca supervisores y guardias de seguridad para unirse a su equipo. La experiencia es valorada, pero se alienta a todos los interesados a aplicar. Beneficios competitivos y oportunidades de desarrollo profesional.envía tu solicitud hoy!</p>
+                        <p><a href="mailto:info@miningcap.cl">info@miningcap.cl</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="myCard">
+                <div class="innerCard">
+                    <div class="frontSide">
+                        <p class="title">¡Oportunidad de Empleo!</p>
+                        <img class="news1" src="{% static 'img/undraw_order_a_car_-3-tww.svg' %}" alt="News">
+                        <p>27/11/2023</p>
+                    </div>
+                    <div class="backSide">
+                        <p class="title">La Empresa requiere conductores</p>
+                        <p>Importante empresa está en la búsqueda de conductores calificados para unirse a su equipo. Se valorará experiencia previa y se ofrecen excelentes beneficios. Si tienes habilidades de manejo y estás listo para un nuevo desafío, ¡envía tu currículum ahora y sé parte de nuestro equipo de conductores!</p>
+                        <p><a href="mailto:info@miningcap.cl">info@miningcap.cl</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="myCard">
+                <div class="innerCard">
+                    <div class="frontSide">
+                        <p class="title">¡Oportunidad Laboral: Asistente Social con Experiencia en Minería en Calama! </p>
+                        <img class="news1" src="{% static 'img/social.svg' %}" alt="News">
+                        <p>2/11/2023</p>
+                    </div>
+                    <div class="backSide">
+                        <p class="title">¡Oportunidad Laboral: Asistente Social con Experiencia en Minería en Calama!</p>
+                        <p>¡Atención profesionales del área social! La empresa líder en el sector minero, MiningCap, está en búsqueda de un(a) Asistente Social para unirse a su equipo en Calama. La experiencia en minería no es excluyente, pero se valora.</p>
+                        <p><a href="mailto:info@miningcap.cl">info@miningcap.cl</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="myCard">
+                <div class="innerCard">
+                    <div class="frontSide">
+                        <p class="title">¡Inicia Tu Camino Educativo!</p>
+                        <img class="news1" src="{% static 'img/mate.svg' %}" alt="News">
+                        <p>20/11/2023</p>
+                    </div>
+                    <div class="backSide">
+                        <p class="title">¡Inicia Tu Camino Educativo! Convocatoria Abierta para Nivelación de Estudios en Mining Cap!</p>
+                        <p>Minig Cap abre sus puertas para aquellos que buscan iniciar o retomar su camino educativo. ¡Únete a la nivelación de estudios y da el primer paso hacia un futuro académico prometedor!</p>
+                        <p><a href="mailto:info@miningcap.cl">info@miningcap.cl</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="myCard">
+                <div class="innerCard">
+                    <div class="frontSide">
+                        <p class="title">Oportunidad de Superación:Inscripciones Abiertas para la Nivelación de Estudios en Minig Cap</p>
+                        <img class="news1" src="{% static 'img/ulti.svg' %}" alt="News">
+                        <p>20/11/2023</p>
+                    </div>
+                    <div class="backSide">
+                        <p class="title">Oportunidad de Superación</p>
+                        <p>La nivelación de estudios llega a [Nombre de la Ciudad], brindando a quienes deseen retomar sus estudios la oportunidad de alcanzar nuevas metas. ¡Inscríbete ahora y construye tu camino hacia el éxito académico!</p>
+                        <p><a href="mailto:info@miningcap.cl">info@miningcap.cl</a></p>
+                    </div>
+                </div>
+            </div>
+
+<script>
+async function checkPassword() {
+    const result = await Swal.fire({
+        title: 'Por favor introduce la contraseña',
+        input: 'password',
+        inputPlaceholder: 'Introduce tu contraseña',
+        inputAttributes: {
+            maxlength: 10,
+            autocapitalize: 'off',
+            autocorrect: 'off'
+        }
+    });
+
+    if (result.value != "123") {
+        Swal.fire('Contraseña incorrecta!')
+        return false;
+    } else {
+        // Haz algo si la contraseña es correcta
+        return true;
+    }
+}
+
+async function toggleDropdown() {
+    const passwordCorrect = await checkPassword();
+    if (!passwordCorrect) {
+        return;
+    }
+    var dropdownContent = document.querySelector(".dropdown-content");
+    if (dropdownContent.style.display === "none") {
+        dropdownContent.style.display = "block";
+    } else {
+        dropdownContent.style.display = "none";
+    }
+}
+
+function previewFile(input) {
+    var url = input.value;
+    var preview = document.getElementById('previewImage'); // selecciona el elemento donde quieres mostrar la imagen
+    preview.src = url;
+}
+
+
+
+
+</script>
+<!-- ============================================================================-->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</html>

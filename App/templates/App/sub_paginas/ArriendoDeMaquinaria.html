@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arriendo de maquinaria</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="{% static 'css/servicios.css' %}">
+    <!-- boxicon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="{% static 'img/favicon-16x16.png' %}">
+
+</head>
+<body>
+<header>
+    <nav id="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="bx bx-menu"></i>
+        </label>
+        <img class="logo" src="{% static 'img/mining (2).png' %}" height="100%">
+        <ul class="ul-navbar">
+          <li class="li-navbar"><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li class="li-navbar"><a href="{% url 'servicios' %}">Servicios</a></li>
+          <li class="li-navbar"><a href="{% url 'nosotros' %}">Nosotros</a></li>
+          <li class="li-navbar"><a href="{% url 'noticias' %}">Noticias</a></li>
+          <li class="li-navbar"><a href="{% url 'contactanos' %}">Contáctanos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<article>
+    <section class="sectionA">
+        <article class="conteinerN">
+            <h1 class="tituloN">Transporte de Carga y Arriendo de Maquinaria</h1>
+            <p class="textoN">Servicios - Transporte de Carga y Arriendo de Maquinaria
+            </p>
+        </article>
+    </section>
+
+    <section class="sectionN2">
+        <article class="containerN2">
+            <h1 class="tituloN2"><i class='bx bx-chevron-right'></i>Transporte de Carga y Arriendo de Maquinaria</h1><br>
+            <p class="textoN2">Transformamos la complejidad logística en una experiencia simplificada al ofrecer servicios integrados
+                de transporte de carga y arriendo de maquinaria especializada. Enfocados en optimizar sus operaciones, nos comprometemos
+                a proporcionar soluciones completas que no solo mueven sus mercancías de manera eficiente, sino que también potencian
+                su capacidad para llevar a cabo proyectos de cualquier escala.
+            </p>
+            <h2 class="tituloC2"><i class='bx bx-chevrons-right'></i>Transporte de Carga Eficiente:</h2><br>
+            <p class="textoN2">Nuestro servicio de transporte de carga va más allá de simplemente movilizar mercancías. Utilizamos una red
+                logística eficiente respaldada por tecnología de vanguardia para garantizar entregas oportunas y seguras.
+                Desde la planificación hasta la ejecución, nos esforzamos por hacer que cada etapa de su cadena de suministro sea fluida y
+                eficiente.
+            </p>
+            <h2 class="tituloC2"><i class='bx bx-chevrons-right'></i>Maquinaria Especializada para sus Desafíos:</h2><br>
+            <p class="textoN2">Ofrecemos una flota de maquinaria especializada diseñada para abordar los desafíos únicos de su
+                industria. Desde equipos de construcción hasta maquinaria pesada, brindamos soluciones que potencian sus proyectos y
+                mejoran la productividad.
+                Ya sea que necesite maquinaria para la construcción, excavación o manipulación de materiales, tenemos la tecnología
+                adecuada para hacer que sus operaciones sean más eficientes y rentables.
+            </p>
+            <h2 class="tituloC2"><i class='bx bx-chevrons-right'></i>Colaboración Centrada en sus Metas:</h2><br>
+            <p class="textoN2">Colaboramos estrechamente con usted para entender sus metas y desafíos específicos. Esta orientación
+                centrada en el cliente nos permite adaptar nuestros servicios para satisfacer sus necesidades únicas y garantizar que
+                cada solución sea completamente personalizada.
+                Su éxito es nuestro objetivo, y trabajamos incansablemente para proporcionar servicios de transporte y maquinaria que
+                no solo cumplen, sino que superan sus expectativas.
+            </p>
+        </article>
+    </section>
+
+    <section class="section4">
+        <article  class="container3">
+
+            <section>
+                <h4 class="contacto">Contacto:</h4>
+                <p class="contacto"><i class='bx bxs-phone' ></i>8070 70 56 55</p>
+                <p class="contacto"><i class="bx bxs-mobile"></i>+56 4 4356787</p>
+                <p class="contacto"><i class="bx bxs-envelope"></i>contacto@miningcap.cl</p>
+                <p class="contacto"><i class="bx bxs-map"></i>Avenida Chorrillos 799, Villa Exótica, Calama Antofagasta</p>
+            </section>
+
+            <section>
+                <img class="img_logo1" src="{% static 'img/logo_mining.png' %}" alt="logo_mining">
+            </section>
+
+            <section>
+                <img class="img_logo2" src="{% static 'img/otec_plus_intercapchile.png' %}" alt="logo_otec">
+                <img class="img_logo3" src="{% static 'img/logo_sci.png' %}" alt="logo_csi">
+            </section>
+        </article>
+    </section>
+</article>
+</body>
+</html>

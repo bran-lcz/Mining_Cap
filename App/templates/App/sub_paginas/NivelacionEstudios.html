@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivelación de estudios</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="{% static 'css/servicios.css' %}">
+    <!-- boxicon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="{% static 'img/favicon-16x16.png' %}">
+
+</head>
+<body>
+<header>
+    <nav id="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="bx bx-menu"></i>
+        </label>
+        <img class="logo" src="{% static 'img/mining (2).png' %}" height="100%">
+        <ul class="ul-navbar">
+          <li class="li-navbar"><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li class="li-navbar"><a href="{% url 'servicios' %}">Servicios</a></li>
+          <li class="li-navbar"><a href="{% url 'nosotros' %}">Nosotros</a></li>
+          <li class="li-navbar"><a href="{% url 'noticias' %}">Noticias</a></li>
+          <li class="li-navbar"><a href="{% url 'contactanos' %}">Contáctanos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<article>
+    <section class="sectionN">
+        <article class="conteinerN">
+            <h1 class="tituloN">Nivelación de Estudios</h1>
+            <p class="textoN">Servicios - Nivelación de Estudios
+            </p>
+        </article>
+    </section>
+
+    <section class="sectionN2">
+        <article class="containerN2">
+            <h1 class="tituloN2"><i class='bx bx-chevron-right'></i>Nivelación de estudios</h1><br>
+            <p class="textoN2">En nuestra plataforma, nos dedicamos a brindar servicios integrales de nivelación académica para aquellos
+                que buscan fortalecer sus habilidades y conocimientos. Nos destacamos por ofrecer programas educativos diseñados para cerrar
+                brechas en la formación académica, permitiendo a los estudiantes avanzar con confianza hacia niveles superiores de educación
+                y desarrollo. Nuestros tutores altamente calificados se centran en proporcionar orientación experta y recursos educativos
+                actualizados para abordar las áreas de oportunidad de cada estudiante. <br><br> Con un enfoque pedagógico efectivo, nos esforzamos
+                por garantizar que los participantes adquieran el conocimiento necesario para superar desafíos académicos y alcancen sus metas
+                educativas. En esta jornada de nivelación de estudios, te ofrecemos un ambiente educativo enriquecedor, donde los estudiantes
+                pueden acceder a una variedad de materiales didácticos y participar en actividades que refuercen sus capacidades. Nos
+                enorgullece ser tu socio en el camino hacia el éxito académico y estamos comprometidos a proporcionar los recursos y la
+                dirección necesarios para impulsar tu progreso. Descubre cómo nuestra plataforma puede ser tu aliado en el logro de tus metas
+                académicas. Bienvenido a una experiencia educativa que te impulsa hacia nuevas alturas de conocimiento y realización.
+
+                <ul>
+                    <li class="viñeta">Tutores Especializados.</li>
+                    <li class="viñeta">Seguimiento Continuo.</li>
+                    <li class="viñeta">Plataforma Interactiva.</li>
+                    <li class="viñeta">Preparación para Exámenes.</li>
+                    <li class="viñeta">Flexibilidad de Horarios.</li>
+                    <li class="viñeta">Certificación y Reconocimiento.</li>
+                </ul>
+
+            </p>
+        </article>
+    </section>
+
+    <section class="section4">
+        <article  class="container3">
+
+            <section>
+                <h4 class="contacto">Contacto:</h4>
+                <p class="contacto"><i class='bx bxs-phone' ></i>8070 70 56 55</p>
+                <p class="contacto"><i class="bx bxs-mobile"></i>+56 4 4356787</p>
+                <p class="contacto"><i class="bx bxs-envelope"></i>contacto@miningcap.cl</p>
+                <p class="contacto"><i class="bx bxs-map"></i>Avenida Chorrillos 799, Villa Exótica, Calama Antofagasta</p>
+            </section>
+
+            <section>
+                <img class="img_logo1" src="{% static 'img/logo_mining.png' %}" alt="logo_mining">
+            </section>
+
+            <section>
+                <img class="img_logo2" src="{% static 'img/otec_plus_intercapchile.png' %}" alt="logo_otec">
+                <img class="img_logo3" src="{% static 'img/logo_sci.png' %}" alt="logo_csi">
+            </section>
+        </article>
+    </section>
+</article>
+</body>
+</html>

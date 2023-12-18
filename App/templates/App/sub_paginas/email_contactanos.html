@@ -1,0 +1,19 @@
+{% csrf_token %}
+
+{{rut}}
+
+{{nombres}}
+
+{{apellidos}}
+{% if correo and telefono %}
+{{ correo }}
+
+{{ telefono }}
+{% elif correo %}
+{{ correo }}
+{% elif telefono %}
+{{ telefono }}
+{% endif %}
+{{metodos_contacto}}
+
+{{servicio_preferido}}

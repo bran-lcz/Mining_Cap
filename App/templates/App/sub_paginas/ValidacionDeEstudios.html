@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Estudios</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="{% static 'css/servicios.css' %}">
+    <!-- boxicon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="{% static 'img/favicon-16x16.png' %}">
+
+</head>
+<body>
+<header>
+    <nav id="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="bx bx-menu"></i>
+        </label>
+        <img class="logo" src="{% static 'img/mining (2).png' %}" height="100%">
+        <ul class="ul-navbar">
+          <li class="li-navbar"><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li class="li-navbar"><a href="{% url 'servicios' %}">Servicios</a></li>
+          <li class="li-navbar"><a href="{% url 'nosotros' %}">Nosotros</a></li>
+          <li class="li-navbar"><a href="{% url 'noticias' %}">Noticias</a></li>
+          <li class="li-navbar"><a href="{% url 'contactanos' %}">Contáctanos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<article>
+    <section class="sectionV">
+        <article class="conteinerN">
+            <h1 class="tituloN">Validación de Estudios de Enseñanza Media</h1>
+            <p class="textoN">Servicios - Validación de Estudios
+            </p>
+        </article>
+    </section>
+
+    <section class="sectionN2">
+        <article class="containerN2">
+            <h1 class="tituloN2"><i class='bx bx-chevron-right'></i>Validación de Estudios de Enseñanza Media Laboral</h1><br>
+            <p class="textoN2">Facilitamos el proceso de validación de estudios de enseñanza media laboral, ofreciéndote la oportunidad
+                de obtener tu diploma de estudios en un período corto de 3 o 4 meses. Reconocemos y respaldamos el aprendizaje
+                significativo adquirido en el ámbito laboral, y nuestro objetivo es allanar el camino para que obtengas el
+                reconocimiento académico necesario al tiempo que persigues nuevas oportunidades educativas y profesionales.
+            </p>
+            <h2 class="tituloC2"><i class='bx bx-chevrons-right'></i>Tu Diploma a tu Alcance en Pocos Meses:</h2><br>
+            <p class="textoN2">Nuestra plataforma está diseñada para que puedas validar tus estudios de enseñanza media laboral de
+                manera eficiente. Con un curso especializado de 3 o 4 meses, te brindamos la ruta más rápida y efectiva para obtener
+                tu diploma, abriendo las puertas a una variedad de oportunidades laborales y educativas.
+            </p>
+            <h2 class="tituloC2"><i class='bx bx-chevrons-right'></i>Oportunidades Educativas y Profesionales Ampliadas:</h2><br>
+            <p class="textoN2">Al obtener tu diploma de estudios a través de nuestro programa de validación, te abrimos las puertas a
+                nuevas oportunidades educativas y profesionales. Creemos que todos merecen acceso a un reconocimiento formal de sus
+                logros, permitiéndote avanzar en tu carrera y aspirar a metas más elevadas.
+            </p>
+            <h2 class="tituloC2"><i class='bx bx-chevrons-right'></i>Un Futuro Educativo y Profesional a Corto Plazo:</h2><br>
+            <p class="textoN2">Únete a nosotros en este viaje educativo acelerado y descubre cómo nuestro programa de validación puede
+                proporcionarte un futuro educativo y profesional a corto plazo. Convierte tu experiencia laboral en un diploma reconocido
+                y abre la puerta a nuevas y emocionantes oportunidades. Bienvenido a una experiencia que simplifica y acelera tu camino
+                hacia el éxito académico y laboral.
+            </p>
+        </article>
+    </section>
+
+    <section class="section4">
+        <article  class="container3">
+
+            <section>
+                <h4 class="contacto">Contacto:</h4>
+                <p class="contacto"><i class='bx bxs-phone' ></i>8070 70 56 55</p>
+                <p class="contacto"><i class="bx bxs-mobile"></i>+56 4 4356787</p>
+                <p class="contacto"><i class="bx bxs-envelope"></i>contacto@miningcap.cl</p>
+                <p class="contacto"><i class="bx bxs-map"></i>Avenida Chorrillos 799, Villa Exótica, Calama Antofagasta</p>
+            </section>
+
+            <section>
+                <img class="img_logo1" src="{% static 'img/logo_mining.png' %}" alt="logo_mining">
+            </section>
+
+            <section>
+                <img class="img_logo2" src="{% static 'img/otec_plus_intercapchile.png' %}" alt="logo_otec">
+                <img class="img_logo3" src="{% static 'img/logo_sci.png' %}" alt="logo_csi">
+            </section>
+        </article>
+    </section>
+</article>
+</body>
+</html>

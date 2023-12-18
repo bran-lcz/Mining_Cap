@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="{% static 'img/favicon-16x16.png' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<title>Contact Form</title>
+	<link href="{% static 'css/P5.css'%}"  rel="stylesheet">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+	<link rel="icon" href="{% static 'img/favicon-16x16.png' %}">
+</head>
+<body>
+	<nav id="navbar">
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="bx bx-menu"></i>
+		</label>
+		<img class="logo" src="{% static 'img/mining (2).png' %}" height="100%">
+		<ul>
+			<li><a href="{% url 'inicio' %}">Inicio</a></li>
+			<li><a href="{% url 'servicios' %}">Servicios</a></li>
+			<li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+			<li><a href="{% url 'noticias' %}">Noticias</a></li>
+			<li><a href="{% url 'contactanos' %}" class="active">Contáctanos</a></li>
+		</ul>
+		</nav>
+		<h2 class="h2-contact">Déjanos tus datos y te contactaremos</h1>
+	<main class="main-background">
+		<div class="main-container">
+			<div class="form-header">
+				<h2 class="form-container">Datos personales</h2>
+			</div>
+			<form method="POST">
+				{% csrf_token %}
+				{% if error_message %}
+				<div class="alert alert-danger d-flex align-items-center" role="alert">
+					<i class='bx bxs-error-circle'></i>
+					{{ error_message }}
+				</div>
+				{% elif success_message %}
+				<div class="alert alert-success d-flex align-items-center" role="alert">
+					<i class='bx bxs-check-circle'></i>
+					{{ success_message }}
+				</div>
+				{% endif %}
+				<div class="form-row-group1">
+					<div class="form-row">
+						<label for="rut">Rut</label>
+    					<input type="text" id="rut" name="rut" placeholder="Ingresa tu Rut">
+					</div>
+					<div class="form-row">
+						<label for="nombres">Nombres</label>
+						<input type="text" id="nombres" name="nombres" placeholder="Ingresa tus nombres">
+					</div>
+					<div class="form-row">
+						<label for="apellidos">Apellidos</label>
+						<input type="text" id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos">
+					</div>
+				</div>
+				<div class="form-row-group2">
+					<div class="form-row">
+						<label for="correo">Correo</label>
+						<input type="email" id="correo" name="correo" placeholder="Ingresa tu correo electrónico">
+					</div>
+					<div class="form-row">
+						<label for="telefono">Teléfono</label>
+						<input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono">
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="contact-methods">
+						<label>¿Por qué métodos prefieres que te contactemos?</label>
+						<input type="checkbox" id="correo-preferido" name="contact-methods" value="correo">
+						<label for="correo-preferido">Correo</label>
+						<input type="checkbox" id="telefono-preferido" name="contact-methods" value="telefono">
+						<label for="telefono-preferido">Teléfono</label>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="info-request">
+						<h3>Información a solicitar</h3>
+					</div>
+				</div>
+				<div class="form-row">
+					<label for="servicio-preferido">Servicio de preferencia</label>
+					<select name="servicio-preferido" id="servicio-preferido">
+						<option selected>Seleccione una opción</option>
+						<option value="Capacitación">Capacitación</option>
+						<option value="Nivelación de estudios">Nivelación de estudios</option>
+						<option value="Continuidad de estudios">Continuidad de estudios</option>
+						<option value="Reclutamiento">Reclutamiento</option>
+					</select>
+				</div>
+				<div class="form-row">
+					<input type="submit" value="Enviar">
+				</div>
+			</form>
+		</div>
+	</main>
+
+	<section class="section3">
+        <article class="container2">
+            <section >
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.3533805255884!2d-68.91321992516039!3d-22.453351021822353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96ac09d9155c338b%3A0x39d097704da5bcd6!2sAv.%20Chorrillos%20799%2C%201392144%20Calama%2C%20Antofagasta!5e0!3m2!1ses-419!2scl!4v1700422017612!5m2!1ses-419!2scl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+            <section class="direccion">
+                <h3 class="titulo2">Dirección</h3>
+                <p class="texto2"><b>Avenida Chorrillos 799, Villa Exótica, Calama, Chile</b></p>
+            </section>
+        </article>
+    </section>
+
+    <section class="section4">
+        <article  class="container3">
+
+            <section>
+                <h4 class="contacto">Contacto:</h4>
+                <p class="contacto"><i class="bx bxs-phone"></i>8070 70 56 55</p>
+                <p class="contacto"><i class="bx bxs-mobile"></i>+56 4 4356787</p>
+                <p class="contacto"><i class="bx bxs-envelope"></i>contacto@miningcap.cl</p>
+                <p class="contacto"><i class="bx bxs-map"></i>Avenida Chorrillos 799, Villa Exótica, Calama Antofagasta</p>
+            </section>
+
+            <section>
+                <img class="img_logo1" src="{% static 'img/logo_mining.png' %}" alt="logo_mining">
+            </section>
+
+            <section>
+                <img class="img_logo2" src="{% static 'img/otec_plus_intercapchile.png' %}" alt="logo_otec">
+                <img class="img_logo3" src="{% static 'img/logo_sci.png' %}" alt="logo_csi">
+            </section>
+        </article>
+    </section>
+
+    <footer>
+        <p>Copyright 2023 Todos los derechos reservados a:<span><a class="JBMP" href="#"> JBMP</a></span></p>
+    </footer>
+</body>
+</html>

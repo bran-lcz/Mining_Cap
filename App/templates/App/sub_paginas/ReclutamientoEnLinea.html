@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclutamiento en linea</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="{% static 'css/servicios.css' %}">
+    <!-- boxicon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="{% static 'img/favicon-16x16.png' %}">
+
+</head>
+<body>
+<header>
+    <nav id="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="bx bx-menu"></i>
+        </label>
+        <img class="logo" src="{% static 'img/mining (2).png' %}" height="100%">
+        <ul class="ul-navbar">
+          <li class="li-navbar"><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li class="li-navbar"><a href="{% url 'servicios' %}">Servicios</a></li>
+          <li class="li-navbar"><a href="{% url 'nosotros' %}">Nosotros</a></li>
+          <li class="li-navbar"><a href="{% url 'noticias' %}">Noticias</a></li>
+          <li class="li-navbar"><a href="{% url 'contactanos' %}">Contáctanos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<article>
+    <section class="sectionR">
+        <article class="conteinerN">
+            <h1 class="tituloN">Reclutamiento en Linea</h1>
+            <p class="textoN">Servicios - Reclutamiento en Linea
+            </p>
+        </article>
+    </section>
+
+    <section class="sectionN2">
+        <article class="containerN2">
+            <h1 class="tituloN2"><i class='bx bx-chevron-right'></i>Reclutamiento en Linea</h1><br>
+            <p class="textoN2">Somos el nexo que une el potencial con las oportunidades laborales, desempeñando un papel esencial
+                como el puente que conecta a profesionales altamente calificados con empresas que buscan habilidades específicas.
+                En nuestra misión de facilitar conexiones significativas en el mundo laboral, actuamos como el catalizador que impulsa
+                carreras y satisface las necesidades laborales de las empresas.
+            </p>
+            <h2 class="tituloC2"><i class='bx bx-chevrons-right'></i>Entendemos tu valor y Conectamos tu Talento:</h2><br>
+            <p class="textoN2">Reconocemos la singularidad de tus habilidades y experiencias. Nos esforzamos por comprender a fondo tu
+                valioso conjunto de talentos para asegurarnos de que encuentres la oportunidad laboral que se alinee perfectamente con
+                tus metas y aspiraciones profesionales.
+                Cada profesional es único, y nuestra labor consiste en destacar esas singularidades y presentarlas de manera
+                impactante a las empresas que valoran y buscan perfiles distintivos.
+            <h2 class="tituloC2"><i class='bx bx-chevrons-right'></i>Empresas Encuentran el Talento que Necesitan:</h2><br>
+            <p class="textoN2">Para las empresas, somos la respuesta a la búsqueda de habilidades específicas. Colaboramos
+                estrechamente con empleadores para entender sus requisitos únicos y, a su vez, identificar a los profesionales que
+                mejor se adaptan a sus necesidades.
+                Ofrecemos un servicio integral que va más allá de la colocación laboral, proporcionando socios estratégicos para el
+                crecimiento empresarial a través de la adquisición de talento excepcional.
+            </p>
+            <h2 class="tituloC2"><i class='bx bx-chevrons-right'></i>Conexiones Significativas en el Mundo Laboral:</h2><br>
+            <p class="textoN2">Nuestra misión es crear conexiones significativas que trasciendan la simple transacción laboral.
+                Buscamos establecer relaciones duraderas, donde profesionales y empresas se beneficien mutuamente y contribuyan al
+                avance colectivo.
+                Al elegirnos, estás optando por una experiencia que va más allá de la búsqueda de empleo, hacia un viaje colaborativo
+                hacia el éxito y la realización profesional.
+            </p>
+        </article>
+    </section>
+
+    <section class="section4">
+        <article  class="container3">
+
+            <section>
+                <h4 class="contacto">Contacto:</h4>
+                <p class="contacto"><i class='bx bxs-phone' ></i>8070 70 56 55</p>
+                <p class="contacto"><i class="bx bxs-mobile"></i>+56 4 4356787</p>
+                <p class="contacto"><i class="bx bxs-envelope"></i>contacto@miningcap.cl</p>
+                <p class="contacto"><i class="bx bxs-map"></i>Avenida Chorrillos 799, Villa Exótica, Calama Antofagasta</p>
+            </section>
+
+            <section>
+                <img class="img_logo1" src="{% static 'img/logo_mining.png' %}" alt="logo_mining">
+            </section>
+
+            <section>
+                <img class="img_logo2" src="{% static 'img/otec_plus_intercapchile.png' %}" alt="logo_otec">
+                <img class="img_logo3" src="{% static 'img/logo_sci.png' %}" alt="logo_csi">
+            </section>
+        </article>
+    </section>
+</article>
+</body>
+</html>

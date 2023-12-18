@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitación</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="{% static 'css/servicios.css' %}">
+    <!-- boxicon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="{% static 'img/favicon-16x16.png' %}">
+
+</head>
+<body>
+<header>
+    <nav id="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="bx bx-menu"></i>
+        </label>
+        <img class="logo" src="{% static 'img/mining (2).png' %}" height="100%">
+        <ul class="ul-navbar">
+          <li class="li-navbar"><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li class="li-navbar"><a href="{% url 'servicios' %}">Servicios</a></li>
+          <li class="li-navbar"><a href="{% url 'nosotros' %}">Nosotros</a></li>
+          <li class="li-navbar"><a href="{% url 'noticias' %}">Noticias</a></li>
+          <li class="li-navbar"><a href="{% url 'contactanos' %}">Contáctanos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<article>
+    <section class="sectionC">
+        <article class="conteinerN">
+            <h1 class="tituloN">Capacitación</h1>
+            <p class="textoN">Servicios - Capacitación
+            </p>
+        </article>
+    </section>
+
+    <section class="sectionN2">
+        <article class="containerN2">
+            <h1 class="tituloN2"><i class='bx bx-chevron-right'></i>Capacitación</h1><br>
+            <p class="textoN2">Enorgullécete de tu educación en el ámbito minero con nosotros, donde la excelencia y la experiencia se
+                unen para ofrecerte una capacitación de primer nivel. Nuestra destacada presencia en la industria minera, respaldada
+                por décadas de experiencia, nos posiciona como líderes en la impartición de cursos de la más alta calidad.
+            </p>
+            <h2 class="tituloC2"><i class='bx bx-chevrons-right'></i>Experiencia Minera de Vanguardia:</h2><br>
+            <p class="textoN2">Sumérgete en una formación que va más allá de los libros de texto. Nuestra extensa experiencia en el ámbito minero no solo
+                informa, sino que transforma la forma en que abordamos la enseñanza. Descubre cómo nuestra experiencia práctica en el terreno se
+                traduce en cursos enriquecidos con conocimientos que van más allá de lo teórico, preparándote para los desafíos reales del mundo
+                minero.
+            <h2 class="tituloC2"><i class='bx bx-chevrons-right'></i>Cursos de Alta Calidad:</h2><br>
+            <p class="textoN2">Nuestros cursos no solo cumplen con los estándares, sino que los elevan. Diseñados meticulosamente para brindar una
+                formación excepcional, te ofrecen habilidades y conocimientos que son directamente aplicables en la industria.
+                Explora la intersección entre la teoría y la práctica a medida que avanzas en tu educación, asegurándote de estar
+                preparado para destacar en un entorno laboral dinámico.
+            </p>
+            <h2 class="tituloC2"><i class='bx bx-chevrons-right'></i>Innovación Educativa:</h2><br>
+            <p class="textoN2">Presentamos con orgullo nuestro Campus Virtual, una plataforma moderna y eficiente que redefine la experiencia de aprendizaje.
+                Desde simulaciones inmersivas hasta recursos interactivos, el Campus Virtual está diseñado para ofrecer una formación práctica que te sumerge
+                en los aspectos más dinámicos y actuales de la industria minera.
+            </p>
+        </article>
+    </section>
+
+    <section class="section4">
+        <article  class="container3">
+
+            <section>
+                <h4 class="contacto">Contacto:</h4>
+                <p class="contacto"><i class='bx bxs-phone' ></i>8070 70 56 55</p>
+                <p class="contacto"><i class="bx bxs-mobile"></i>+56 4 4356787</p>
+                <p class="contacto"><i class="bx bxs-envelope"></i>contacto@miningcap.cl</p>
+                <p class="contacto"><i class="bx bxs-map"></i>Avenida Chorrillos 799, Villa Exótica, Calama Antofagasta</p>
+            </section>
+
+            <section>
+                <img class="img_logo1" src="{% static 'img/logo_mining.png' %}" alt="logo_mining">
+            </section>
+
+            <section>
+                <img class="img_logo2" src="{% static 'img/otec_plus_intercapchile.png' %}" alt="logo_otec">
+                <img class="img_logo3" src="{% static 'img/logo_sci.png' %}" alt="logo_csi">
+            </section>
+        </article>
+    </section>
+</article>
+</body>
+</html>
